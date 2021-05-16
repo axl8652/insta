@@ -44,7 +44,7 @@ def username(size = 6, chars  = string.ascii_lowercase + random.choice(['.', '_'
 
 # Generating a Email
 def generatingEmail() :
-    return ''.join(username() + '@mail.com')
+    return ''.join(username() + '@mailslurp.com')
 
 print (username())
 
