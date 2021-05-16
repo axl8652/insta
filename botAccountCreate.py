@@ -54,7 +54,10 @@ print('Registering....')
 #month_field.select_by_visible_text('January')
 #month_field = drop_downs[0].click()
 #month_field.send_keys(email)
-drop_downs  = browser.find_element_by_class_name('h144z')
-drop_downs[0].selectselect_by_visible_text('January')
-
+#drop_down_month  = browser.find_element_by_xpath('//select[@title="Month:"]')
 print('Selecting month....')
+browser.find_element_by_xpath("//select[@title='Month:']/option[text()='"+month+"']").click()
+browser.find_element_by_xpath("//select[@title='Day:']/option[text()='"+str(day)+"']").click()
+browser.find_element_by_xpath("//select[@title='Year:']/option[text()='"+str(year)+"']").click()
+
+browser.find_element_by_xpath("//button[contains(text(),'Next')]").click()
